@@ -27,7 +27,8 @@ const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
 <html lang="es-CO">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <!-- Accessible Viewport: Scalable for low-vision users (WCAG / Lighthouse) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <!-- Primary Meta Tags -->
   <title>{title}</title>
@@ -45,14 +46,12 @@ const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <meta name="apple-mobile-web-app-title" content="uniFud" />
   <meta name="application-name" content="uniFud" />
-  <meta name="format-detection" content="telephone=no" />
 
   <!-- Favicons & Touch Icons -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="icon" type="image/png" sizes="32x32" href="/logo.png" />
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/logo.png" />
-  <link rel="apple-touch-icon-precomposed" href="/logo.png" />
 
   <!-- Open Graph / Facebook / WhatsApp -->
   <meta property="og:type" content={type} />
@@ -77,19 +76,20 @@ const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
   <meta name="twitter:site" content="@unifud_co" />
   <meta name="twitter:creator" content="@unifud_co" />
 
-  <!-- Geographic & Local SEO (Cali, Valle del Cauca, Colombia) -->
+  <!-- Geographic & Local SEO (Cali, Colombia) -->
   <meta name="geo.region" content="CO-VAC" />
   <meta name="geo.placename" content="Cali, Valle del Cauca, Colombia" />
   <meta name="geo.position" content="3.3718;-76.5323" />
   <meta name="ICBM" content="3.3718, -76.5323" />
-  <meta name="locality" content="Cali" />
-  <meta name="region" content="Valle del Cauca" />
-  <meta name="country-name" content="Colombia" />
 
-  <!-- High-Performance Typography: Plus Jakarta Sans & Inter (Google Fonts) -->
+  <!-- High Performance Non-Blocking Font Loading (Instant FCP / LCP) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" />
+  </noscript>
 
   <!-- Structured Data / JSON-LD -->
   <script type="application/ld+json" set:html={JSON.stringify({
@@ -154,7 +154,7 @@ const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
 </head>
 <body>
   <!-- Ambient Light Effects -->
-  <div class="bg-ambient">
+  <div class="bg-ambient" aria-hidden="true">
     <div class="ambient-blob-1"></div>
     <div class="ambient-blob-2"></div>
     <div class="ambient-blob-3"></div>
@@ -163,9 +163,7 @@ const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
   <slot />
 
   <script>
-    // Global client behavior
     document.addEventListener('DOMContentLoaded', () => {
-      // Sticky header effect
       const header = document.querySelector('.site-header');
       window.addEventListener('scroll', () => {
         if (window.scrollY > 30) {
@@ -173,7 +171,7 @@ const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
         } else {
           header?.classList.remove('scrolled');
         }
-      });
+      }, { passive: true });
     });
   </script>
 </body>

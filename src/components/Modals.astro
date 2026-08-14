@@ -1,36 +1,36 @@
 ---
 ---
 <!-- Download Modal -->
-<div id="modal-download" class="modal-overlay">
+<div id="modal-download" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-download-title">
   <div class="modal-card">
-    <button class="modal-close">&times;</button>
-    <h3 style="margin-bottom: 8px;">Descarga uniFud App</h3>
-    <p style="font-size: 15px; color: var(--text-muted);">Escanea el código QR desde tu teléfono o ingresa a tu tienda de aplicaciones.</p>
+    <button class="modal-close" aria-label="Cerrar modal">&times;</button>
+    <h3 id="modal-download-title" style="margin-bottom: 8px; color: var(--navy-900);">Descarga uniFud App</h3>
+    <p style="font-size: 15px; color: #475569; margin-bottom: 20px;">Escanea el código QR desde tu teléfono o ingresa a tu tienda de aplicaciones.</p>
     
     <div style="text-align: center; margin: 24px 0;">
       <div class="qr-box">
-        <svg width="170" height="170" viewBox="0 0 100 100" fill="#0A131F">
-          <rect x="0" y="0" width="30" height="30" fill="#0A131F"/>
+        <svg width="170" height="170" viewBox="0 0 100 100" fill="#223846" role="img" aria-label="Código QR para descargar la app uniFud">
+          <rect x="0" y="0" width="30" height="30" fill="#223846"/>
           <rect x="5" y="5" width="20" height="20" fill="#fff"/>
-          <rect x="9" y="9" width="12" height="12" fill="#0A131F"/>
-          <rect x="70" y="0" width="30" height="30" fill="#0A131F"/>
+          <rect x="9" y="9" width="12" height="12" fill="#223846"/>
+          <rect x="70" y="0" width="30" height="30" fill="#223846"/>
           <rect x="75" y="5" width="20" height="20" fill="#fff"/>
-          <rect x="79" y="9" width="12" height="12" fill="#0A131F"/>
-          <rect x="0" y="70" width="30" height="30" fill="#0A131F"/>
+          <rect x="79" y="9" width="12" height="12" fill="#223846"/>
+          <rect x="0" y="70" width="30" height="30" fill="#223846"/>
           <rect x="5" y="75" width="20" height="20" fill="#fff"/>
-          <rect x="9" y="79" width="12" height="12" fill="#0A131F"/>
-          <rect x="40" y="10" width="8" height="8" fill="#0A131F"/>
-          <rect x="52" y="18" width="8" height="8" fill="#0A131F"/>
+          <rect x="9" y="79" width="12" height="12" fill="#223846"/>
+          <rect x="40" y="10" width="8" height="8" fill="#223846"/>
+          <rect x="52" y="18" width="8" height="8" fill="#223846"/>
           <rect x="36" y="36" width="28" height="28" fill="#F59E0B"/>
-          <rect x="40" y="70" width="12" height="12" fill="#0A131F"/>
-          <rect x="60" y="60" width="8" height="16" fill="#0A131F"/>
-          <rect x="76" y="76" width="14" height="14" fill="#0A131F"/>
+          <rect x="40" y="70" width="12" height="12" fill="#223846"/>
+          <rect x="60" y="60" width="8" height="16" fill="#223846"/>
+          <rect x="76" y="76" width="14" height="14" fill="#223846"/>
         </svg>
       </div>
     </div>
 
     <div style="display: flex; flex-direction: column; gap: 12px;">
-      <a href="https://apps.apple.com/co/app/unifud/id6749837367" target="_blank" class="btn btn-dark" style="width: 100%;">
+      <a href="https://apps.apple.com/co/app/unifud/id6749837367" target="_blank" rel="noopener" class="btn btn-dark" style="width: 100%;">
         Descargar en App Store (iOS)
       </a>
       <a href="#" class="btn btn-outline" style="width: 100%;">
@@ -41,28 +41,28 @@
 </div>
 
 <!-- Reps Modal -->
-<div id="modal-reps" class="modal-overlay">
+<div id="modal-reps" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-reps-title">
   <div class="modal-card">
-    <button class="modal-close">&times;</button>
-    <h3 style="margin-bottom: 8px;">Postulación uniFud Reps</h3>
-    <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 24px;">Únete al equipo embajador y obtén beneficios en tu campus.</p>
+    <button class="modal-close" aria-label="Cerrar modal">&times;</button>
+    <h3 id="modal-reps-title" style="margin-bottom: 8px; color: var(--navy-900);">Postulación uniFud Reps</h3>
+    <p style="font-size: 14px; color: #475569; margin-bottom: 24px;">Únete al equipo embajador y obtén beneficios en tu campus.</p>
     
     <form id="reps-form">
       <div class="form-group">
-        <label>Nombre Completo</label>
-        <input type="text" class="form-control" placeholder="Tu nombre y apellido" required />
+        <label for="rep-fullname">Nombre Completo</label>
+        <input type="text" id="rep-fullname" name="fullname" class="form-control" placeholder="Tu nombre y apellido" required />
       </div>
       <div class="form-group">
-        <label>Universidad y Carrera</label>
-        <input type="text" class="form-control" placeholder="Ej: ICESI - Ing. de Sistemas" required />
+        <label for="rep-career">Universidad y Carrera</label>
+        <input type="text" id="rep-career" name="career" class="form-control" placeholder="Ej: ICESI - Ing. de Sistemas" required />
       </div>
       <div class="form-group">
-        <label>Semestre Actual</label>
-        <input type="text" class="form-control" placeholder="Ej: 4to semestre" required />
+        <label for="rep-semester">Semestre Actual</label>
+        <input type="text" id="rep-semester" name="semester" class="form-control" placeholder="Ej: 4to semestre" required />
       </div>
       <div class="form-group">
-        <label>Instagram o WhatsApp</label>
-        <input type="text" class="form-control" placeholder="@usuario / +57 300..." required />
+        <label for="rep-contact">Instagram o WhatsApp</label>
+        <input type="text" id="rep-contact" name="contact" class="form-control" placeholder="@usuario / +57 300..." required />
       </div>
       <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px; padding: 16px;">
         Enviar Postulación
@@ -87,7 +87,7 @@
     font-size: 13px;
     font-weight: 700;
     margin-bottom: 8px;
-    color: var(--navy-950);
+    color: var(--navy-900);
   }
   .form-control {
     width: 100%;
@@ -95,7 +95,7 @@
     background: var(--bg-cream);
     border: 1.5px solid var(--border-card);
     border-radius: var(--radius-sm);
-    color: var(--navy-950);
+    color: var(--navy-900);
     font-family: inherit;
     font-size: 14px;
     outline: none;
