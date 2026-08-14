@@ -1,42 +1,45 @@
 :root {
-  /* Official uniFud Color Palette */
+  /* Official uniFud Color Palette (Optimized for High Contrast / WCAG AA) */
   --bg-cream: #FEFBF0;
-  --bg-cream-soft: #F7F2E2;
+  --bg-cream-soft: #F6F0DF;
   --bg-cream-card: #FFFFFF;
   
   /* Brand Teal/Navy (#223846) */
-  --navy-950: #182933;
+  --navy-950: #14222B;
   --navy-900: #223846;
-  --navy-850: #263E4D;
-  --navy-800: #2E4B5E;
-  --navy-700: #3D627B;
+  --navy-850: #1B2D38;
+  --navy-800: #263E4D;
+  --navy-700: #2F4C5E;
   
   /* Amber Yolk */
-  --amber-500: #F59E0B;
-  --amber-400: #FBBF24;
-  --amber-300: #FCD34D;
+  --amber-600: #B45309;
+  --amber-500: #D97706;
+  --amber-400: #F59E0B;
+  --amber-300: #FBBF24;
   --amber-100: #FEF3C7;
   --amber-gradient: linear-gradient(135deg, #FFC024 0%, #F59E0B 50%, #D97706 100%);
-  --amber-glow: rgba(245, 158, 11, 0.25);
+  --amber-glow: rgba(217, 119, 6, 0.25);
   
+  --mint-700: #047857;
   --mint-600: #059669;
   --mint-500: #10B981;
-  --mint-100: #D1FAE5;
-  --mint-glow: rgba(16, 185, 129, 0.2);
+  --mint-100: #DCFCE7;
+  --mint-glow: rgba(5, 150, 105, 0.2);
 
+  --coral-600: #B91C1C;
   --coral-500: #DC2626;
   --coral-100: #FEE2E2;
 
-  --border-light: #EDE6D4;
-  --border-card: #E4DCC6;
-  --border-dark: rgba(255, 255, 255, 0.1);
-  --border-amber: rgba(245, 158, 11, 0.35);
+  --border-light: #E8E0CB;
+  --border-card: #DFD7C2;
+  --border-dark: rgba(255, 255, 255, 0.12);
+  --border-amber: rgba(245, 158, 11, 0.45);
 
-  --text-dark: #223846;
-  --text-body: #334A59;
-  --text-muted: #647B8C;
+  --text-dark: #14222B;
+  --text-body: #1E2E38;
+  --text-muted: #3D5361;
   --text-white: #FFFFFF;
-  --text-gray-300: #CBD5E1;
+  --text-gray-300: #E2E8F0;
 
   /* Typography */
   --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -51,11 +54,11 @@
   --radius-full: 9999px;
 
   /* Elevation */
-  --shadow-subtle: 0 4px 20px rgba(34, 56, 70, 0.05);
-  --shadow-card: 0 12px 36px rgba(34, 56, 70, 0.08);
-  --shadow-card-hover: 0 20px 50px rgba(34, 56, 70, 0.14);
-  --shadow-dark: 0 20px 60px rgba(24, 41, 51, 0.45);
-  --shadow-amber: 0 12px 35px rgba(245, 158, 11, 0.3);
+  --shadow-subtle: 0 4px 20px rgba(20, 34, 43, 0.05);
+  --shadow-card: 0 12px 36px rgba(20, 34, 43, 0.08);
+  --shadow-card-hover: 0 20px 50px rgba(20, 34, 43, 0.14);
+  --shadow-dark: 0 20px 60px rgba(10, 18, 23, 0.55);
+  --shadow-amber: 0 12px 35px rgba(217, 119, 6, 0.3);
 
   /* Transitions */
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
