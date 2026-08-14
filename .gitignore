@@ -23,3 +23,9 @@ pnpm-debug.log*
 # IDE & Editor settings
 .vscode/
 .idea/
+
+# AI instructions & agents config
+AGENTS.md
+CLAUDE.md
+.agents/
+
