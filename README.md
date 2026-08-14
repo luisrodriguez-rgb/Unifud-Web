@@ -12,23 +12,12 @@
 
 ---
 
-## Auditoria de Rendimiento y Calidad (Lighthouse)
+## Descargo de Responsabilidad y Proposito Educativo
 
-Desplegado y verificado en produccion en [unifud-web.vercel.app](https://unifud-web.vercel.app/):
-
-<div align="center">
-  <img src="public/lighthouse-score.png" alt="Lighthouse Score uniFud Web" width="850" />
-</div>
-
-### Metricas Clave de Rendimiento y Accesibilidad
-
-| Dimension | Puntuacion | Detalle de Optimizacion |
-| :--- | :---: | :--- |
-| **Rendimiento** | **94 / 100** | Carga de fuentes no bloqueante, FCP/LCP < 1.9s, CLS = 0, TBT = 0ms |
-| **Accesibilidad** | **96 / 100** | Cumplimiento estricto WCAG AA, contraste 4.5:1+, roles ARIA y labels |
-| **Recomendaciones** | **100 / 100** | Estandares web modernos, HTTPS seguro y buenas practicas de seguridad |
-| **SEO** | **100 / 100** | Schema.org JSON-LD estructurado, Open Graph, Geo Tags Cali y Sitemap XML |
-| **Navegacion con Agentes** | **2 / 2** | Estructura semantica accesible para indexadores y navegacion asistida |
+> **Aviso de Caracter Educativo y No Comercial:**
+> Este repositorio y proyecto web corresponden a una propuesta de rediseno conceptual, academica y de investigacion tecnica sobre arquitectura frontend moderna, optimizacion de rendimiento (Astro 5+, TypeScript) y experiencia de usuario (UI/UX) para aplicaciones de campus universitarios.
+>
+> Este desarrollo **no tiene fines de comercializacion ni lucro independiente**. Todos los nombres comerciales, marcas registradas, marcas de comida y logotipos mostrados (como uniFud, Sandwich Qbano, Wonka Campus, Universidades) pertenecen exclusivamente a sus respectivos propietarios legales y se utilizan unicamente como referencia visual y contextual en el marco del estudio de diseno y arquitectura de software.
 
 ---
 
@@ -52,6 +41,26 @@ Esta plataforma web esta construida con **Astro 5+**, implementando una arquitec
   - `terminos-y-condiciones.astro`: Terminos y Condiciones de Uso v1.0 - Colombia.
   - `politica-privacidad.astro`: Politica de Tratamiento de Datos Personales (Ley 1581 de 2012 / Habeas Data).
   - `solicitud-de-borrado.astro`: Procedimiento formal para eliminacion de cuenta y datos.
+
+---
+
+## Auditoria de Rendimiento y Calidad (Lighthouse)
+
+Desplegado y verificado en produccion en [unifud-web.vercel.app](https://unifud-web.vercel.app/):
+
+<div align="center">
+  <img src="public/lighthouse-score.png" alt="Lighthouse Score uniFud Web" width="850" />
+</div>
+
+### Metricas Clave de Rendimiento y Accesibilidad
+
+| Dimension | Puntuacion | Detalle de Optimizacion |
+| :--- | :---: | :--- |
+| **Rendimiento** | **94 / 100** | Carga de fuentes no bloqueante, FCP/LCP < 1.9s, CLS = 0, TBT = 0ms |
+| **Accesibilidad** | **96 / 100** | Cumplimiento estricto WCAG AA, contraste 4.5:1+, roles ARIA y labels |
+| **Recomendaciones** | **100 / 100** | Estandares web modernos, HTTPS seguro y buenas practicas de seguridad |
+| **SEO** | **100 / 100** | Schema.org JSON-LD estructurado, Open Graph, Geo Tags Cali y Sitemap XML |
+| **Navegacion con Agentes** | **2 / 2** | Estructura semantica accesible para indexadores y navegacion asistida |
 
 ---
 
@@ -138,17 +147,17 @@ npm run preview
 
 ---
 
-## Informacion Corporativa
+## Informacion Corporativa de Referencia
 
-- **Razon Social**: UNIFUD S.A.S.
+- **Razon Social de Referencia**: UNIFUD S.A.S.
 - **NIT**: 901968882-2
 - **Domicilio**: Cali, Valle del Cauca, Colombia
-- **Contacto Administrativo**: administracion@unifudapp.com
+- **Contacto Administrativo Oficial**: administracion@unifudapp.com
 - **Canal Habeas Data**: atencionalclienteunifud@gmail.com
 - **Instagram Oficial**: [@unifud.co](https://instagram.com/unifud.co)
 
 ---
 
-## Licencia
+## Licencia y Derechos
 
-Todos los derechos reservados. (c) 2026 UNIFUD S.A.S.
+Proyecto desarrollado bajo licencia MIT / Uso Académico Demostrativo. Todos los derechos sobre marcas y nombres comerciales corresponden a sus respectivos titulares.
