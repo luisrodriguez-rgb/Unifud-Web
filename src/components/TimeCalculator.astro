@@ -1,0 +1,138 @@
+---
+---
+<div id="calculadora" class="calc-box">
+  <div class="calc-sliders">
+    <h3>Calcula tu tiempo ahorrado en el semestre</h3>
+    <p style="color: var(--text-muted); font-size: 16px;">Descubre cuántas horas recuperas para estudiar, descansar o compartir con tus amigos.</p>
+    
+    <div class="slider-group">
+      <label>Días que asistes a la universidad: <span id="val-days">4 días / semana</span></label>
+      <input type="range" id="slider-days" class="slider-input" min="1" max="6" value="4" />
+    </div>
+
+    <div class="slider-group">
+      <label>Comidas o cafés al día en el campus: <span id="val-meals">2 veces / día</span></label>
+      <input type="range" id="slider-meals" class="slider-input" min="1" max="4" value="2" />
+    </div>
+  </div>
+
+  <div class="calc-result-card">
+    <span class="calc-result-label">Tiempo Ahorrado Estimado</span>
+    <div id="calc-hours-result" class="calc-result-number">47 hrs</div>
+    <p>Equivalente a más de <strong>2 días completos de tiempo libre</strong> que no perdiste haciendo fila.</p>
+  </div>
+</div>
+
+<style>
+  .calc-box {
+    background: #FFFFFF;
+    border: 2px solid var(--border-card);
+    border-radius: var(--radius-2xl);
+    padding: 56px;
+    box-shadow: var(--shadow-card);
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 50px;
+    align-items: center;
+  }
+  .calc-sliders {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+  .calc-sliders h3 {
+    font-size: 28px;
+    color: var(--navy-950);
+  }
+  .slider-group label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--navy-950);
+  }
+  .slider-group label span {
+    color: var(--amber-500);
+    font-size: 16px;
+  }
+  .slider-input {
+    width: 100%;
+    height: 10px;
+    background: var(--bg-cream-soft);
+    border: 1px solid var(--border-card);
+    border-radius: 6px;
+    outline: none;
+    accent-color: var(--amber-500);
+    cursor: pointer;
+  }
+  .calc-result-card {
+    background: var(--navy-900);
+    border-radius: var(--radius-xl);
+    padding: 40px 32px;
+    text-align: center;
+    color: var(--text-white);
+    box-shadow: var(--shadow-dark);
+  }
+  .calc-result-label {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--amber-300);
+    font-weight: 700;
+  }
+  .calc-result-number {
+    font-size: 64px;
+    font-weight: 900;
+    font-family: var(--font-heading);
+    line-height: 1.05;
+    margin: 14px 0;
+    color: #FFFFFF;
+  }
+  .calc-result-card p {
+    font-size: 15px;
+    color: var(--text-gray-300);
+    line-height: 1.5;
+  }
+  .calc-result-card p strong {
+    color: var(--amber-300);
+  }
+  @media (max-width: 1024px) {
+    .calc-box {
+      grid-template-columns: 1fr;
+      padding: 36px 28px;
+    }
+  }
+</style>
+
+<script>
+  function initTimeCalc() {
+    const daysSlider = document.getElementById('slider-days') as HTMLInputElement;
+    const mealsSlider = document.getElementById('slider-meals') as HTMLInputElement;
+    const daysVal = document.getElementById('val-days');
+    const mealsVal = document.getElementById('val-meals');
+    const hoursOutput = document.getElementById('calc-hours-result');
+
+    function calculate() {
+      if (!daysSlider || !mealsSlider || !daysVal || !mealsVal || !hoursOutput) return;
+      const days = parseInt(daysSlider.value, 10);
+      const meals = parseInt(mealsSlider.value, 10);
+      
+      daysVal.textContent = `${days} días / semana`;
+      mealsVal.textContent = `${meals} veces / día`;
+
+      const minutesSavedSemester = days * meals * 22 * 16;
+      const hoursSaved = Math.round(minutesSavedSemester / 60);
+
+      hoursOutput.textContent = `${hoursSaved} hrs`;
+    }
+
+    if (daysSlider && mealsSlider) {
+      daysSlider.addEventListener('input', calculate);
+      mealsSlider.addEventListener('input', calculate);
+      calculate();
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', initTimeCalc);
+</script>

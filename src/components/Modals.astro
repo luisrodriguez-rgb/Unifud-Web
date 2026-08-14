@@ -1,0 +1,141 @@
+---
+---
+<!-- Download Modal -->
+<div id="modal-download" class="modal-overlay">
+  <div class="modal-card">
+    <button class="modal-close">&times;</button>
+    <h3 style="margin-bottom: 8px;">Descarga uniFud App</h3>
+    <p style="font-size: 15px; color: var(--text-muted);">Escanea el código QR desde tu teléfono o ingresa a tu tienda de aplicaciones.</p>
+    
+    <div style="text-align: center; margin: 24px 0;">
+      <div class="qr-box">
+        <svg width="170" height="170" viewBox="0 0 100 100" fill="#0A131F">
+          <rect x="0" y="0" width="30" height="30" fill="#0A131F"/>
+          <rect x="5" y="5" width="20" height="20" fill="#fff"/>
+          <rect x="9" y="9" width="12" height="12" fill="#0A131F"/>
+          <rect x="70" y="0" width="30" height="30" fill="#0A131F"/>
+          <rect x="75" y="5" width="20" height="20" fill="#fff"/>
+          <rect x="79" y="9" width="12" height="12" fill="#0A131F"/>
+          <rect x="0" y="70" width="30" height="30" fill="#0A131F"/>
+          <rect x="5" y="75" width="20" height="20" fill="#fff"/>
+          <rect x="9" y="79" width="12" height="12" fill="#0A131F"/>
+          <rect x="40" y="10" width="8" height="8" fill="#0A131F"/>
+          <rect x="52" y="18" width="8" height="8" fill="#0A131F"/>
+          <rect x="36" y="36" width="28" height="28" fill="#F59E0B"/>
+          <rect x="40" y="70" width="12" height="12" fill="#0A131F"/>
+          <rect x="60" y="60" width="8" height="16" fill="#0A131F"/>
+          <rect x="76" y="76" width="14" height="14" fill="#0A131F"/>
+        </svg>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <a href="https://apps.apple.com/co/app/unifud/id6749837367" target="_blank" class="btn btn-dark" style="width: 100%;">
+        Descargar en App Store (iOS)
+      </a>
+      <a href="#" class="btn btn-outline" style="width: 100%;">
+        Descargar para Android
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Reps Modal -->
+<div id="modal-reps" class="modal-overlay">
+  <div class="modal-card">
+    <button class="modal-close">&times;</button>
+    <h3 style="margin-bottom: 8px;">Postulación uniFud Reps</h3>
+    <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 24px;">Únete al equipo embajador y obtén beneficios en tu campus.</p>
+    
+    <form id="reps-form">
+      <div class="form-group">
+        <label>Nombre Completo</label>
+        <input type="text" class="form-control" placeholder="Tu nombre y apellido" required />
+      </div>
+      <div class="form-group">
+        <label>Universidad y Carrera</label>
+        <input type="text" class="form-control" placeholder="Ej: ICESI - Ing. de Sistemas" required />
+      </div>
+      <div class="form-group">
+        <label>Semestre Actual</label>
+        <input type="text" class="form-control" placeholder="Ej: 4to semestre" required />
+      </div>
+      <div class="form-group">
+        <label>Instagram o WhatsApp</label>
+        <input type="text" class="form-control" placeholder="@usuario / +57 300..." required />
+      </div>
+      <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px; padding: 16px;">
+        Enviar Postulación
+      </button>
+    </form>
+  </div>
+</div>
+
+<style>
+  .qr-box {
+    background: var(--bg-cream-soft);
+    padding: 20px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-card);
+    display: inline-block;
+  }
+  .form-group {
+    margin-bottom: 18px;
+  }
+  .form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--navy-950);
+  }
+  .form-control {
+    width: 100%;
+    padding: 12px 16px;
+    background: var(--bg-cream);
+    border: 1.5px solid var(--border-card);
+    border-radius: var(--radius-sm);
+    color: var(--navy-950);
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: var(--transition);
+  }
+  .form-control:focus {
+    border-color: var(--amber-500);
+    background: #FFFFFF;
+  }
+</style>
+
+<script>
+  function initModals() {
+    const downloadModal = document.getElementById('modal-download');
+    const repsModal = document.getElementById('modal-reps');
+    const openDownloadBtns = document.querySelectorAll('.btn-open-download');
+    const openRepsBtns = document.querySelectorAll('.btn-open-reps');
+    const closeBtns = document.querySelectorAll('.modal-close, .modal-overlay');
+
+    openDownloadBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        downloadModal?.classList.add('open');
+      });
+    });
+
+    openRepsBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        repsModal?.classList.add('open');
+      });
+    });
+
+    closeBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        if (e.target === btn) {
+          document.querySelectorAll('.modal-overlay').forEach(m => m.classList.remove('open'));
+        }
+      });
+    });
+  }
+  document.addEventListener('DOMContentLoaded', initModals);
+</script>

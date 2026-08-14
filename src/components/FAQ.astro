@@ -1,0 +1,125 @@
+---
+---
+<section id="faq" class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="badge-tag navy">Preguntas Frecuentes</div>
+      <h2>Todo lo que necesitas saber</h2>
+      <p>Resolvemos tus dudas sobre cómo funciona la pre-orden y recogida en campus.</p>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>¿Cuánto cuesta utilizar uniFud?</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          Para los estudiantes es 100% gratuito. Los precios de los platos son exactamente los mismos de la carta oficial del restaurante, sin cobros por servicio ni propinas obligatorias.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>¿Cómo me avisan que mi comida está lista?</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          Te enviamos una notificación directa a tu WhatsApp y a la app en el instante en que el restaurante marca "Pedido Listo". Te acercas a la barra designada, muestras tu confirmación y recoges en 20 segundos.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>¿Qué métodos de pago puedo utilizar?</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          Puedes pagar de manera rápida y segura con Nequi, Daviplata, PSE, tarjetas débito/crédito y con Saldo uniFud acumulado por referidos.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>¿Mi universidad aún no aparece en la lista, qué puedo hacer?</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          Escríbenos por Instagram a @unifud.co o postúlate en el programa uniFud Reps. Priorizamos la apertura de nuevas sedes en las universidades con mayor número de solicitudes.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq-list {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .faq-item {
+    background: #FFFFFF;
+    border: 2px solid var(--border-card);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: var(--transition);
+    box-shadow: var(--shadow-subtle);
+  }
+  .faq-item:hover {
+    border-color: var(--amber-400);
+  }
+  .faq-question {
+    width: 100%;
+    padding: 24px 28px;
+    background: transparent;
+    border: none;
+    color: var(--navy-950);
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 700;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  .faq-question svg {
+    transition: transform 0.3s ease;
+    color: var(--text-muted);
+  }
+  .faq-item.active .faq-question svg {
+    transform: rotate(180deg);
+    color: var(--amber-500);
+  }
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+    padding: 0 28px;
+    font-size: 15px;
+    color: var(--text-body);
+    line-height: 1.65;
+  }
+  .faq-item.active .faq-answer {
+    max-height: 200px;
+    padding-bottom: 24px;
+  }
+</style>
+
+<script>
+  function initFAQ() {
+    const items = document.querySelectorAll('.faq-item');
+    items.forEach(item => {
+      const q = item.querySelector('.faq-question');
+      q?.addEventListener('click', () => {
+        const isOpen = item.classList.contains('active');
+        items.forEach(i => i.classList.remove('active'));
+        if (!isOpen) item.classList.add('active');
+      });
+    });
+  }
+  document.addEventListener('DOMContentLoaded', initFAQ);
+</script>

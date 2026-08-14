@@ -1,0 +1,154 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Solicitud de borrado de cuenta y datos — uniFud" description="Solicitud de borrado de cuenta y datos de la app uniFud.">
+  <Navbar />
+  <main class="legal-main">
+    <div class="container legal-container">
+      <div class="legal-header">
+        <span class="badge-tag navy">Documento Legal</span>
+        <h1>Solicitud de borrado de cuenta y datos — uniFud</h1>
+        <p class="legal-subtitle">Plataforma uniFud · Aplicación y Servicios</p>
+      </div>
+
+      <div class="legal-content">
+        <section>
+          <p>
+            Esta información aplica a la app uniFud y al desarrollador uniFud. Si deseas eliminar tu cuenta y los datos asociados, sigue los pasos indicados a continuación.
+          </p>
+        </section>
+
+        <section>
+          <h2>Pasos para solicitar el borrado de tu cuenta</h2>
+          <p>Puedes solicitar la eliminación de tu cuenta y datos de dos formas:</p>
+
+          <h3>Desde la app uniFud</h3>
+          <p>
+            En la sección <strong>Perfil</strong> dentro de la app uniFud encontrarás la opción de eliminar tu cuenta. Al utilizarla, se eliminarán tus datos asociados de forma permanente.
+          </p>
+
+          <h3>Por correo electrónico</h3>
+          <ul>
+            <li>Envía un correo a <a href="mailto:administracion@unifudapp.com" class="legal-link">administracion@unifudapp.com</a> con el asunto "Solicitud de borrado de cuenta".</li>
+            <li>Incluye la dirección de correo electrónico asociada a tu cuenta en uniFud.</li>
+            <li>(Opcional) Confirma en el mensaje que deseas eliminar la cuenta y los datos asociados.</li>
+          </ul>
+          <p>
+            Recibirás una respuesta en un plazo de hasta 30 días naturales. Una vez procesada la solicitud, te confirmaremos la eliminación de tu cuenta y datos.
+          </p>
+        </section>
+
+        <section>
+          <h2>Datos que se borran</h2>
+          <p>Una vez procesada tu solicitud, se eliminan de forma permanente los siguientes datos asociados a tu cuenta:</p>
+          <ul>
+            <li>Datos de la cuenta (correo electrónico, nombre, teléfono si aplica)</li>
+            <li>Historial de pedidos</li>
+            <li>Preferencias y configuraciones en la app</li>
+            <li>Datos de dispositivo asociados a la cuenta</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Datos que se conservan</h2>
+          <p>
+            Se podrán conservar datos anonimizados o agregados que ya no permitan identificar al usuario, así como registros que la ley exija conservar (por ejemplo, facturación o impuestos) durante el período legal aplicable.
+          </p>
+        </section>
+
+        <section>
+          <h2>Períodos de retención</h2>
+          <p>
+            Tras la eliminación de la cuenta no se conservan datos personales identificables. Los únicos datos que pueden mantenerse son los que la legislación aplicable obligue a retener (por ejemplo, hasta 5 años en materia de facturación o impuestos). Pasado ese período, se eliminarán también.
+          </p>
+        </section>
+
+        <section>
+          <h2>Contacto</h2>
+          <p>
+            Para cualquier duda sobre la eliminación de tu cuenta o de tus datos, escribe a <a href="mailto:administracion@unifudapp.com" class="legal-link">administracion@unifudapp.com</a>. También puedes ir a la sección de contacto de la página principal.
+          </p>
+        </section>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .legal-main {
+    padding: 80px 0 120px;
+  }
+  .legal-container {
+    max-width: 920px;
+  }
+  .legal-header {
+    margin-bottom: 48px;
+    padding-bottom: 32px;
+    border-bottom: 2px solid var(--border-card);
+  }
+  .legal-header h1 {
+    font-size: clamp(30px, 4vw, 44px);
+    color: var(--navy-950);
+    margin: 12px 0 6px;
+    letter-spacing: -0.02em;
+  }
+  .legal-subtitle {
+    font-size: 16px;
+    color: var(--text-muted);
+    font-weight: 700;
+  }
+  .legal-content {
+    background: #FFFFFF;
+    border: 2px solid var(--border-card);
+    border-radius: var(--radius-2xl);
+    padding: 64px 56px;
+    box-shadow: var(--shadow-card);
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+  .legal-content section h2 {
+    font-size: 20px;
+    color: var(--navy-950);
+    margin-bottom: 14px;
+    border-left: 4px solid var(--amber-500);
+    padding-left: 14px;
+    letter-spacing: -0.01em;
+  }
+  .legal-content section h3 {
+    font-size: 17px;
+    color: var(--navy-900);
+    margin: 20px 0 8px;
+  }
+  .legal-content p {
+    font-size: 15px;
+    color: var(--text-body);
+    line-height: 1.75;
+    margin-bottom: 12px;
+  }
+  .legal-content ul {
+    margin: 10px 0 16px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .legal-content li {
+    font-size: 15px;
+    color: var(--text-body);
+    line-height: 1.65;
+  }
+  .legal-link {
+    color: var(--amber-500);
+    font-weight: 700;
+    text-decoration: underline;
+  }
+  @media (max-width: 768px) {
+    .legal-content {
+      padding: 36px 24px;
+    }
+  }
+</style>

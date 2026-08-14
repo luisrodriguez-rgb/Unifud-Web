@@ -1,0 +1,163 @@
+---
+import { campusData } from '../data/campusData';
+---
+<section id="restaurantes" class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="badge-tag mint">Oferta Gastronómica</div>
+      <h2>Explora los Menús de tu Campus</h2>
+      <p>Selecciona tu universidad para ver los restaurantes y combos disponibles hoy.</p>
+    </div>
+
+    <div class="campus-tabs-wrapper">
+      <div class="campus-tabs">
+        <button class="campus-tab-btn active" data-campus="icesi">Universidad ICESI</button>
+        <button class="campus-tab-btn" data-campus="javeriana">Javeriana Cali</button>
+        <button class="campus-tab-btn" data-campus="lagoverde">Lago Verde</button>
+      </div>
+    </div>
+
+    <!-- Campus Tab Panels (Pre-rendered for 100% SEO, styling and instant speed) -->
+    {Object.entries(campusData).map(([campusKey, campus]) => (
+      <div id={`campus-panel-${campusKey}`} class={`campus-panel ${campusKey === 'icesi' ? 'active' : ''}`}>
+        <div class="restaurants-grid">
+          {campus.restaurants.map((res) => (
+            <div class="restaurant-card">
+              <div class="res-header">
+                <span class={`res-status-badge ${res.isOpen ? 'open' : 'closed'}`}>
+                  <span class="status-dot"></span>
+                  {res.status}
+                </span>
+                <div class="res-logo-box">{res.logoText}</div>
+              </div>
+              <div class="res-body">
+                <div>
+                  <h4>{res.name}</h4>
+                  <div class="res-meta">
+                    <span>{res.category}</span>
+                    <span class="meta-separator">•</span>
+                    <span>{res.prepTime}</span>
+                    <span class="meta-separator">•</span>
+                    <span class="rating-tag">★ {res.rating}</span>
+                  </div>
+                  <div class="res-popular-items">
+                    {res.items.map((item) => (
+                      <div class="res-menu-row">
+                        <span>{item.name}</span>
+                        <strong>{item.price}</strong>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <button class="btn btn-primary btn-sm btn-simulate-order" data-res={res.name} style="width: 100%; margin-top: 10px;">
+                  Pre-ordenar en 1 click
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .campus-tabs-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  .campus-tabs {
+    display: flex;
+    background: #FFFFFF;
+    padding: 8px;
+    border-radius: var(--radius-full);
+    border: 2px solid var(--border-card);
+    box-shadow: var(--shadow-subtle);
+    gap: 8px;
+  }
+  .campus-tab-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-body);
+    padding: 12px 28px;
+    border-radius: var(--radius-full);
+    font-family: var(--font-heading);
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  .campus-tab-btn:hover {
+    color: var(--navy-950);
+  }
+  .campus-tab-btn.active {
+    background: var(--navy-900);
+    color: #FFFFFF;
+    box-shadow: var(--shadow-card);
+  }
+  .campus-panel {
+    display: none;
+    animation: fadeIn 0.3s ease;
+  }
+  .campus-panel.active {
+    display: block;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .res-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  .meta-separator {
+    color: var(--border-card);
+  }
+  .rating-tag {
+    color: var(--amber-500);
+    font-weight: 700;
+  }
+  .status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: currentColor;
+  }
+</style>
+
+<script>
+  function initCampusSwitcherTabs() {
+    const tabButtons = document.querySelectorAll('.campus-tab-btn');
+    const panels = document.querySelectorAll('.campus-panel');
+    const phoneLocLabel = document.getElementById('phone-campus-name');
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const campusKey = btn.getAttribute('data-campus');
+        if (!campusKey) return;
+
+        tabButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        panels.forEach(p => p.classList.remove('active'));
+        const activePanel = document.getElementById(`campus-panel-${campusKey}`);
+        if (activePanel) activePanel.classList.add('active');
+
+        if (phoneLocLabel) {
+          if (campusKey === 'icesi') phoneLocLabel.textContent = 'Universidad ICESI';
+          if (campusKey === 'javeriana') phoneLocLabel.textContent = 'Univ. Javeriana Cali';
+          if (campusKey === 'lagoverde') phoneLocLabel.textContent = 'Lago Verde';
+        }
+      });
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', initCampusSwitcherTabs);
+</script>

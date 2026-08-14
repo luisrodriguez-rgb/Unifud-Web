@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <!-- Definitions for Gradients & Shadows -->
+  <defs>
+    <!-- Yolk Gradient -->
+    <radialGradient id="yolkGrad" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FFC024" />
+      <stop offset="65%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </radialGradient>
+    
+    <!-- Egg Shell Backing -->
+    <linearGradient id="shellGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="60%" stop-color="#F7EED9" />
+      <stop offset="100%" stop-color="#EADBBE" />
+    </linearGradient>
+
+    <!-- Egg Inner White -->
+    <linearGradient id="innerWhiteGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#FAF5E8" />
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(10, 0)">
+    <!-- 1. Egg Shell (Exterior 3D back of half-egg) -->
+    <!-- Outer curve path representing the egg base -->
+    <path d="M 210 120 
+             C 170 170, 165 300, 250 365 
+             C 325 425, 415 370, 440 270 
+             C 455 210, 435 150, 395 125
+             C 350 160, 240 180, 210 120 Z" 
+          fill="url(#shellGrad)" 
+          stroke="#223846" 
+          stroke-width="16" 
+          stroke-linejoin="round" />
+
+    <!-- 2. Egg Cut Flat Face (Oval angled diagonally) -->
+    <ellipse cx="320" cy="235" rx="115" ry="145" 
+             transform="rotate(35 320 235)" 
+             fill="url(#innerWhiteGrad)" 
+             stroke="#223846" 
+             stroke-width="16" />
+
+    <!-- 3. Egg Yolk (Yema) with Highlight -->
+    <ellipse cx="330" cy="230" rx="64" ry="78" 
+             transform="rotate(35 330 230)" 
+             fill="url(#yolkGrad)" 
+             stroke="#223846" 
+             stroke-width="14" />
+    
+    <!-- Yolk Light Reflection -->
+    <ellipse cx="315" cy="205" rx="22" ry="12" 
+             transform="rotate(25 315 205)" 
+             fill="#FFEBB0" 
+             opacity="0.75" />
+
+    <!-- 4. Graduation Cap (Birrete) -->
+    <!-- Cap Skull Base (Copa) -->
+    <path d="M 178 145 C 180 180, 245 195, 275 160 L 275 140 C 240 160, 190 155, 178 145 Z" 
+          fill="#182933" 
+          stroke="#223846" 
+          stroke-width="12" 
+          stroke-linejoin="round" />
+
+    <!-- Cap Skull Front Highlight -->
+    <path d="M 182 145 C 190 168, 245 178, 272 150" 
+          fill="none" 
+          stroke="#223846" 
+          stroke-width="8" />
+
+    <!-- Cap Rhombus Board (Tabique romboidal superior) -->
+    <!-- Angled diamond plane -->
+    <polygon points="230,35 350,85 230,140 115,88" 
+             fill="#223846" 
+             stroke="#182933" 
+             stroke-width="14" 
+             stroke-linejoin="round" />
+
+    <!-- Cap Top Plane Inner Facet for 3D depth -->
+    <polygon points="230,42 338,87 230,132 126,90" 
+             fill="#2C4859" />
+
+    <!-- Cap Center Button -->
+    <ellipse cx="230" cy="90" rx="9" ry="7" fill="#182933" stroke="#223846" stroke-width="4" />
+
+    <!-- Cap Tassel Ribbon (Cinta y borla colgante hacia la izquierda) -->
+    <path d="M 230 90 Q 155 105 145 155" 
+          fill="none" 
+          stroke="#182933" 
+          stroke-width="7" 
+          stroke-linecap="round" />
+    
+    <!-- Tassel Bead & Fringe (Borla) -->
+    <circle cx="144" cy="160" r="7" fill="#182933" />
+    <path d="M 139 166 L 135 198 C 135 204, 153 204, 153 198 L 149 166 Z" 
+          fill="#223846" 
+          stroke="#182933" 
+          stroke-width="5" 
+          stroke-linejoin="round" />
+  </g>
+</svg>

@@ -1,0 +1,180 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  canonical?: string;
+  keywords?: string;
+  type?: string;
+}
+
+const {
+  title = "uniFud — Pide comida en tu campus sin hacer filas | App Universitaria",
+  description = "uniFud te permite pre-ordenar alimentos y bebidas en restaurantes de tu universidad (ICESI, Javeriana Cali, Lago Verde) y recoger sin filas en segundos.",
+  image = "/logo.png",
+  canonical = "https://www.unifudapp.com",
+  keywords = "uniFud, comida universidad, pre-orden campus, evitar filas, ICESI, Javeriana Cali, Lago Verde, foodtech Colombia, domicilios universitarios Cali",
+  type = "website"
+} = Astro.props;
+
+const siteUrl = "https://www.unifudapp.com";
+const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
+---
+
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  
+  <!-- Primary Meta Tags -->
+  <title>{title}</title>
+  <meta name="title" content={title} />
+  <meta name="description" content={description} />
+  <meta name="keywords" content={keywords} />
+  <meta name="author" content="UNIFUD S.A.S." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <link rel="canonical" href={canonical} />
+
+  <!-- Theme Color & Mobile Experience -->
+  <meta name="theme-color" content="#FEFBF0" />
+  <meta name="msapplication-TileColor" content="#223846" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="uniFud" />
+  <meta name="application-name" content="uniFud" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <!-- Favicons & Touch Icons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/logo.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/logo.png" />
+  <link rel="apple-touch-icon-precomposed" href="/logo.png" />
+
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content={type} />
+  <meta property="og:site_name" content="uniFud" />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={fullImageUrl} />
+  <meta property="og:image:secure_url" content={fullImageUrl} />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="uniFud — Foodtech Universitaria" />
+  <meta property="og:locale" content="es_CO" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content={canonical} />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={fullImageUrl} />
+  <meta name="twitter:site" content="@unifud_co" />
+  <meta name="twitter:creator" content="@unifud_co" />
+
+  <!-- Geographic & Local SEO (Cali, Valle del Cauca, Colombia) -->
+  <meta name="geo.region" content="CO-VAC" />
+  <meta name="geo.placename" content="Cali, Valle del Cauca, Colombia" />
+  <meta name="geo.position" content="3.3718;-76.5323" />
+  <meta name="ICBM" content="3.3718, -76.5323" />
+  <meta name="locality" content="Cali" />
+  <meta name="region" content="Valle del Cauca" />
+  <meta name="country-name" content="Colombia" />
+
+  <!-- High-Performance Typography: Plus Jakarta Sans & Inter (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Structured Data / JSON-LD -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.unifudapp.com/#organization",
+        "name": "UNIFUD S.A.S.",
+        "alternateName": "uniFud",
+        "url": "https://www.unifudapp.com",
+        "logo": "https://www.unifudapp.com/logo.png",
+        "taxID": "901968882-2",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Cali",
+          "addressRegion": "Valle del Cauca",
+          "addressCountry": "CO"
+        },
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "email": "administracion@unifudapp.com",
+            "contactType": "customer service",
+            "areaServed": "CO",
+            "availableLanguage": "Spanish"
+          }
+        ],
+        "sameAs": [
+          "https://instagram.com/unifud.co"
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://www.unifudapp.com/#app",
+        "name": "uniFud App",
+        "operatingSystem": "iOS, Android",
+        "applicationCategory": "FoodAndDrinkApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "COP"
+        },
+        "description": "Plataforma para pre-ordenar comida en campus universitarios y recoger sin filas.",
+        "author": {
+          "@id": "https://www.unifudapp.com/#organization"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.unifudapp.com/#website",
+        "url": "https://www.unifudapp.com",
+        "name": "uniFud",
+        "description": "La fila puede esperar. El hambre no.",
+        "publisher": {
+          "@id": "https://www.unifudapp.com/#organization"
+        },
+        "inLanguage": "es-CO"
+      }
+    ]
+  })} />
+</head>
+<body>
+  <!-- Ambient Light Effects -->
+  <div class="bg-ambient">
+    <div class="ambient-blob-1"></div>
+    <div class="ambient-blob-2"></div>
+    <div class="ambient-blob-3"></div>
+  </div>
+
+  <slot />
+
+  <script>
+    // Global client behavior
+    document.addEventListener('DOMContentLoaded', () => {
+      // Sticky header effect
+      const header = document.querySelector('.site-header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 30) {
+          header?.classList.add('scrolled');
+        } else {
+          header?.classList.remove('scrolled');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+---
+
+---
+
+<section class="ticker-section">
+  <div class="container">
+    <div class="ticker-label">
+      Sedes Activas y Aliados Comerciales en Cali, Colombia
+    </div>
+    <div class="ticker-grid">
+      <div class="ticker-item">
+        <div class="ticker-badge">
+          <span class="ticker-dot"></span> Universidad ICESI
+        </div>
+      </div>
+      <div class="ticker-item">
+        <div class="ticker-badge">
+          <span class="ticker-dot"></span> Pontificia Universidad Javeriana
+        </div>
+      </div>
+      <div class="ticker-item">
+        <div class="ticker-badge">
+          <span class="ticker-dot"></span> Lago Verde
+        </div>
+      </div>
+      <div class="ticker-item">
+        <div class="ticker-badge brand">Sandwich Q bano</div>
+      </div>
+      <div class="ticker-item">
+        <div class="ticker-badge brand">Wonka Campus</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .ticker-section {
+    padding: 36px 0 60px;
+    border-bottom: 1px solid var(--border-light);
+  }
+  .ticker-label {
+    text-align: center;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    margin-bottom: 28px;
+    font-weight: 700;
+  }
+  .ticker-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px 40px;
+  }
+  .ticker-item {
+    display: flex;
+    align-items: center;
+    transition: var(--transition);
+  }
+  .ticker-item:hover {
+    transform: translateY(-2px);
+  }
+  .ticker-badge {
+    padding: 10px 22px;
+    background: #ffffff;
+    border: 1.5px solid var(--border-card);
+    border-radius: var(--radius-full);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--navy-950);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: var(--shadow-subtle);
+  }
+  .ticker-badge.brand {
+    border-color: rgba(245, 158, 11, 0.4);
+    background: var(--amber-100);
+    color: var(--amber-500);
+  }
+  .ticker-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--mint-500);
+    box-shadow: 0 0 10px var(--mint-500);
+  }
+</style>

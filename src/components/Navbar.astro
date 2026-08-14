@@ -1,0 +1,123 @@
+---
+---
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="/" class="brand-logo">
+      <div class="brand-icon-wrapper">
+        <img src="/logo.svg" alt="uniFud Logo" width="46" height="46" />
+      </div>
+      <span class="brand-text">uni<span class="brand-fud">Fud</span></span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="/#como-funciona">Cómo Funciona</a></li>
+      <li><a href="/#restaurantes">Restaurantes</a></li>
+      <li><a href="/#calculadora">Calculadora</a></li>
+      <li><a href="/aliados">Para Restaurantes</a></li>
+      <li><a href="/reps">Embajadores</a></li>
+      <li><a href="/#faq">Preguntas</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="btn btn-primary btn-sm btn-open-download">
+        Descargar App
+      </button>
+    </div>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 20px 0;
+    background: rgba(254, 251, 240, 0.92);
+    backdrop-filter: blur(16px);
+    border-bottom: 1.5px solid var(--border-light);
+    transition: var(--transition);
+  }
+  .site-header.scrolled {
+    padding: 14px 0;
+    box-shadow: var(--shadow-subtle);
+  }
+  .nav-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--navy-900);
+    font-family: var(--font-heading);
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+  }
+  .brand-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+  }
+  .brand-logo:hover .brand-icon-wrapper {
+    transform: rotate(-5deg) scale(1.05);
+  }
+  .brand-text {
+    color: var(--navy-900);
+  }
+  .brand-fud {
+    font-weight: 900;
+    color: var(--navy-900);
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: var(--text-body);
+    font-size: 15px;
+    font-weight: 600;
+    transition: var(--transition);
+    position: relative;
+  }
+  .nav-links a:hover {
+    color: var(--navy-900);
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2.5px;
+    background: var(--amber-500);
+    transition: var(--transition);
+    border-radius: 2px;
+  }
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  @media (max-width: 860px) {
+    .nav-links {
+      display: none;
+    }
+  }
+</style>

@@ -1,0 +1,224 @@
+---
+---
+<section id="para-restaurantes" class="section b2b-section">
+  <div class="container b2b-grid">
+    <div>
+      <div class="badge-tag" style="background: rgba(245, 158, 11, 0.2); color: #FBBF24;">
+        Para Restaurantes de Campus
+      </div>
+      <h2 style="color: #FFFFFF;">Multiplica tus ventas en horas pico sin colapsar tu cocina</h2>
+      <p style="color: var(--text-gray-300); font-size: 18px; margin: 20px 0 28px; line-height: 1.6;">
+        El 60% de los estudiantes se van de un restaurante universitario si ven más de 8 personas en fila. Con uniFud, capturas esas ventas antes de que lleguen al punto físico.
+      </p>
+
+      <div class="b2b-features">
+        <div class="b2b-feat-card">
+          <div class="b2b-icon-badge">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          </div>
+          <h4>+35% Capacidad Operativa</h4>
+          <p>Despacha más pedidos en el pico de 12:00m a 2:00pm sin necesidad de contratar más cajeros.</p>
+        </div>
+        <div class="b2b-feat-card">
+          <div class="b2b-icon-badge">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h4>Previsibilidad en Cocina</h4>
+          <p>Conoce los platos con anticipación, reduce el desperdicio de insumos y agiliza las entregas.</p>
+        </div>
+      </div>
+
+      <div class="b2b-calc-widget">
+        <label>
+          Simulador de Incremento Comercial: <span id="b2b-orders-val">60 pedidos / día</span>
+        </label>
+        <input type="range" id="b2b-orders-slider" class="slider-input" min="20" max="250" value="60" />
+        <div class="b2b-calc-footer">
+          <span>Ingresos adicionales estimados:</span>
+          <strong id="b2b-extra-revenue">+$8.3 Millones COP / mes</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- B2B Lead Form -->
+    <div class="b2b-form-card">
+      <h3>Afiliar mi Restaurante</h3>
+      <p style="font-size: 14px; color: var(--text-gray-300); margin-bottom: 28px;">
+        Activa tu local en uniFud en menos de 24 horas y comienza a recibir pedidos anticipados.
+      </p>
+
+      <form id="b2b-form">
+        <div class="form-group">
+          <label>Nombre del Restaurante o Concesión</label>
+          <input type="text" class="form-control" placeholder="Ej: Sandwiches La Estación" required />
+        </div>
+
+        <div class="form-group">
+          <label>Campus Universitario</label>
+          <input type="text" class="form-control" placeholder="Ej: ICESI, Javeriana Cali, Lago Verde" required />
+        </div>
+
+        <div class="form-group">
+          <label>Nombre de Contacto y Cargo</label>
+          <input type="text" class="form-control" placeholder="Ej: Carlos Gómez (Administrador)" required />
+        </div>
+
+        <div class="form-group">
+          <label>Número de WhatsApp / Celular</label>
+          <input type="tel" class="form-control" placeholder="Ej: +57 300 123 4567" required />
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 14px; padding: 16px;">
+          Solicitar Activación Comercial
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<style>
+  .b2b-section {
+    background: var(--navy-950);
+    border-top: 1px solid var(--border-dark);
+    border-bottom: 1px solid var(--border-dark);
+  }
+  .b2b-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .b2b-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 32px;
+  }
+  .b2b-feat-card {
+    background: var(--navy-900);
+    padding: 28px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-dark);
+  }
+  .b2b-icon-badge {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-md);
+    background: rgba(245, 158, 11, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+  .b2b-feat-card h4 {
+    font-size: 18px;
+    color: #FFFFFF;
+    margin-bottom: 8px;
+  }
+  .b2b-feat-card p {
+    font-size: 14px;
+    color: var(--text-gray-300);
+    line-height: 1.5;
+  }
+  .b2b-calc-widget {
+    margin-top: 36px;
+    padding: 26px;
+    background: var(--navy-900);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-dark);
+  }
+  .b2b-calc-widget label {
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    color: #FFFFFF;
+  }
+  .b2b-calc-widget label span {
+    color: var(--amber-400);
+  }
+  .b2b-calc-footer {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    color: var(--text-gray-300);
+  }
+  .b2b-calc-footer strong {
+    color: var(--mint-400);
+    font-size: 20px;
+    font-family: var(--font-heading);
+  }
+  .b2b-form-card {
+    background: var(--navy-900);
+    border: 2px solid var(--border-amber);
+    padding: 48px;
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-dark);
+  }
+  .b2b-form-card h3 {
+    font-size: 26px;
+    color: #FFFFFF;
+    margin-bottom: 8px;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  .form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #FFFFFF;
+  }
+  .form-control {
+    width: 100%;
+    padding: 14px 18px;
+    background: var(--navy-950);
+    border: 1.5px solid var(--border-dark);
+    border-radius: var(--radius-sm);
+    color: #fff;
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+    transition: var(--transition);
+  }
+  .form-control:focus {
+    border-color: var(--amber-400);
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.25);
+  }
+  @media (max-width: 1024px) {
+    .b2b-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+  function initROICalc() {
+    const ordersSlider = document.getElementById('b2b-orders-slider') as HTMLInputElement;
+    const ordersVal = document.getElementById('b2b-orders-val');
+    const extraRevenueOutput = document.getElementById('b2b-extra-revenue');
+
+    function updateROI() {
+      if (!ordersSlider || !ordersVal || !extraRevenueOutput) return;
+      const currentOrders = parseInt(ordersSlider.value, 10);
+      ordersVal.textContent = `${currentOrders} pedidos / día`;
+
+      const extraDailyOrders = Math.round(currentOrders * 0.35);
+      const monthlyExtraCOP = extraDailyOrders * 18000 * 22;
+      
+      const formatted = (monthlyExtraCOP / 1000000).toFixed(1);
+      extraRevenueOutput.textContent = `+$${formatted} Millones COP / mes`;
+    }
+
+    if (ordersSlider) {
+      ordersSlider.addEventListener('input', updateROI);
+      updateROI();
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', initROICalc);
+</script>

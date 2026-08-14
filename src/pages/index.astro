@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Hero from "../components/Hero.astro";
+import CampusTicker from "../components/CampusTicker.astro";
+import ProblemSolution from "../components/ProblemSolution.astro";
+import CampusRestaurants from "../components/CampusRestaurants.astro";
+import B2BSection from "../components/B2BSection.astro";
+import RepsProgram from "../components/RepsProgram.astro";
+import FAQ from "../components/FAQ.astro";
+import Modals from "../components/Modals.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="uniFud — Pide comida en tu campus sin hacer filas">
+  <Navbar />
+  <main>
+    <Hero />
+    <CampusTicker />
+    <ProblemSolution />
+    <CampusRestaurants />
+    <B2BSection />
+    <RepsProgram />
+    <FAQ />
+  </main>
+  <Modals />
+  <Footer />
+</Layout>

@@ -1,0 +1,63 @@
+:root {
+  /* Official uniFud Color Palette */
+  --bg-cream: #FEFBF0;
+  --bg-cream-soft: #F7F2E2;
+  --bg-cream-card: #FFFFFF;
+  
+  /* Brand Teal/Navy (#223846) */
+  --navy-950: #182933;
+  --navy-900: #223846;
+  --navy-850: #263E4D;
+  --navy-800: #2E4B5E;
+  --navy-700: #3D627B;
+  
+  /* Amber Yolk */
+  --amber-500: #F59E0B;
+  --amber-400: #FBBF24;
+  --amber-300: #FCD34D;
+  --amber-100: #FEF3C7;
+  --amber-gradient: linear-gradient(135deg, #FFC024 0%, #F59E0B 50%, #D97706 100%);
+  --amber-glow: rgba(245, 158, 11, 0.25);
+  
+  --mint-600: #059669;
+  --mint-500: #10B981;
+  --mint-100: #D1FAE5;
+  --mint-glow: rgba(16, 185, 129, 0.2);
+
+  --coral-500: #DC2626;
+  --coral-100: #FEE2E2;
+
+  --border-light: #EDE6D4;
+  --border-card: #E4DCC6;
+  --border-dark: rgba(255, 255, 255, 0.1);
+  --border-amber: rgba(245, 158, 11, 0.35);
+
+  --text-dark: #223846;
+  --text-body: #334A59;
+  --text-muted: #647B8C;
+  --text-white: #FFFFFF;
+  --text-gray-300: #CBD5E1;
+
+  /* Typography */
+  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Large Dimensions & Radii */
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --radius-xl: 36px;
+  --radius-2xl: 48px;
+  --radius-full: 9999px;
+
+  /* Elevation */
+  --shadow-subtle: 0 4px 20px rgba(34, 56, 70, 0.05);
+  --shadow-card: 0 12px 36px rgba(34, 56, 70, 0.08);
+  --shadow-card-hover: 0 20px 50px rgba(34, 56, 70, 0.14);
+  --shadow-dark: 0 20px 60px rgba(24, 41, 51, 0.45);
+  --shadow-amber: 0 12px 35px rgba(245, 158, 11, 0.3);
+
+  /* Transitions */
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition: all 0.26s var(--ease);
+}
