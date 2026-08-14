@@ -6,25 +6,29 @@
   <br />
 </div>
 
----
-
-## Auditoria de Calidad y Rendimiento (Lighthouse)
-
-El proyecto ha sido optimizado bajo estandares de alto rendimiento web, logrando calificaciones sobresalientes en produccion evaluado en [unifud-web.vercel.app](https://unifud-web.vercel.app/):
-
 <div align="center">
-  <img src="public/lighthouse-score.png" alt="Lighthouse Score uniFud Web" width="800" />
+  <img src="public/preview-devices.png" alt="uniFud Web Responsive Preview (Mobile & Desktop)" width="950" />
 </div>
 
-### Metricas Clave Obtenidas
+---
 
-| Dimension | Puntuacion | Detalle Tecnico |
+## Auditoria de Rendimiento y Calidad (Lighthouse)
+
+Desplegado y verificado en produccion en [unifud-web.vercel.app](https://unifud-web.vercel.app/):
+
+<div align="center">
+  <img src="public/lighthouse-score.png" alt="Lighthouse Score uniFud Web" width="850" />
+</div>
+
+### Metricas Clave de Rendimiento y Accesibilidad
+
+| Dimension | Puntuacion | Detalle de Optimizacion |
 | :--- | :---: | :--- |
 | **Rendimiento** | **94 / 100** | Carga de fuentes no bloqueante, FCP/LCP < 1.9s, CLS = 0, TBT = 0ms |
-| **Accesibilidad** | **96 / 100** | Cumplimiento WCAG AA, contraste de color 4.5:1+, jerarquia semantica estricta y etiquetas ARIA |
-| **Recomendaciones** | **100 / 100** | Buenas practicas de desarrollo web moderno, HTTPS seguro y 0 dependencias obsoletas |
-| **SEO** | **100 / 100** | Schema.org JSON-LD estructurado, Open Graph, Twitter Cards, Geo Tags locales y Sitemap XML |
-| **Navegacion con Agentes** | **2 / 2** | Estructura semantica accesible para indexadores y agentes de navegacion |
+| **Accesibilidad** | **96 / 100** | Cumplimiento estricto WCAG AA, contraste 4.5:1+, roles ARIA y labels |
+| **Recomendaciones** | **100 / 100** | Estandares web modernos, HTTPS seguro y buenas practicas de seguridad |
+| **SEO** | **100 / 100** | Schema.org JSON-LD estructurado, Open Graph, Geo Tags Cali y Sitemap XML |
+| **Navegacion con Agentes** | **2 / 2** | Estructura semantica accesible para indexadores y navegacion asistida |
 
 ---
 
@@ -60,7 +64,8 @@ unifud-web/
 │   ├── logo.png              # Asset en alta resolucion para Open Graph
 │   ├── favicon.svg           # Icono de pestana SVG
 │   ├── favicon.ico           # Favicon universal
-│   ├── lighthouse-score.png  # Evidencia de auditoria Lighthouse (94/96/100/100)
+│   ├── preview-devices.png   # Captura responsive en dispositivos reales
+│   ├── lighthouse-score.png  # Evidencia de auditoria Lighthouse
 │   ├── robots.txt            # Directivas de rastreo para motores de busqueda
 │   └── sitemap.xml           # Indice de rutas estaticas para indexacion
 ├── src/
