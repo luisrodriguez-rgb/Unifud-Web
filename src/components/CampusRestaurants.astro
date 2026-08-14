@@ -65,28 +65,33 @@ import { campusData } from '../data/campusData';
   .campus-tabs-wrapper {
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: clamp(30px, 5vw, 50px);
+    width: 100%;
   }
   .campus-tabs {
     display: flex;
     background: #FFFFFF;
-    padding: 8px;
+    padding: 6px;
     border-radius: var(--radius-full);
     border: 2px solid var(--border-card);
     box-shadow: var(--shadow-subtle);
-    gap: 8px;
+    gap: 6px;
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .campus-tab-btn {
     background: transparent;
     border: none;
     color: var(--text-body);
-    padding: 12px 28px;
+    padding: 10px 22px;
     border-radius: var(--radius-full);
     font-family: var(--font-heading);
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
     cursor: pointer;
     transition: var(--transition);
+    white-space: nowrap;
   }
   .campus-tab-btn:hover {
     color: var(--navy-950);
@@ -111,17 +116,17 @@ import { campusData } from '../data/campusData';
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 6px 10px;
     font-size: 13px;
     color: var(--text-muted);
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     font-weight: 600;
   }
   .meta-separator {
     color: var(--border-card);
   }
   .rating-tag {
-    color: var(--amber-500);
+    color: var(--amber-600);
     font-weight: 700;
   }
   .status-dot {
@@ -129,6 +134,19 @@ import { campusData } from '../data/campusData';
     height: 7px;
     border-radius: 50%;
     background: currentColor;
+  }
+  @media (max-width: 640px) {
+    .campus-tabs {
+      border-radius: var(--radius-lg);
+      width: 100%;
+      gap: 4px;
+    }
+    .campus-tab-btn {
+      flex: 1 1 auto;
+      text-align: center;
+      padding: 8px 12px;
+      font-size: 12px;
+    }
   }
 </style>
 

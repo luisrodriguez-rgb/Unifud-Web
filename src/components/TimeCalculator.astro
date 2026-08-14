@@ -103,6 +103,28 @@
       padding: 36px 28px;
     }
   }
+  @media (max-width: 640px) {
+    .calc-box {
+      padding: 24px 18px;
+      border-radius: var(--radius-lg);
+      gap: 30px;
+    }
+    .calc-sliders h3 {
+      font-size: 22px;
+    }
+    .slider-group label {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+    }
+    .calc-result-card {
+      padding: 24px 16px;
+      border-radius: var(--radius-lg);
+    }
+    .calc-result-number {
+      font-size: clamp(42px, 12vw, 54px);
+    }
+  }
 </style>
 
 <script>
