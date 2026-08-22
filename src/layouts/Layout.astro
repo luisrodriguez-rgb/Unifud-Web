@@ -11,15 +11,15 @@ interface Props {
 }
 
 const {
-  title = "uniFud — Pide comida en tu campus sin hacer filas | App Universitaria",
-  description = "uniFud te permite pre-ordenar alimentos y bebidas en restaurantes de tu universidad (ICESI, Javeriana Cali, Lago Verde) y recoger sin filas en segundos.",
+  title = "uniFub — Pide comida en tu campus sin hacer filas | App Universitaria",
+  description = "uniFub te permite pre-ordenar alimentos y bebidas en restaurantes de tu universidad (ICESI, Javeriana Cali, Lago Verde) y recoger sin filas en segundos.",
   image = "/logo.png",
-  canonical = "https://www.unifudapp.com",
-  keywords = "uniFud, comida universidad, pre-orden campus, evitar filas, ICESI, Javeriana Cali, Lago Verde, foodtech Colombia, domicilios universitarios Cali",
+  canonical = "https://www.unifubapp.com",
+  keywords = "uniFub, comida universidad, pre-orden campus, evitar filas, ICESI, Javeriana Cali, Lago Verde, foodtech Colombia, domicilios universitarios Cali",
   type = "website"
 } = Astro.props;
 
-const siteUrl = "https://www.unifudapp.com";
+const siteUrl = "https://www.unifubapp.com";
 const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
 ---
 
@@ -35,7 +35,7 @@ const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
   <meta name="title" content={title} />
   <meta name="description" content={description} />
   <meta name="keywords" content={keywords} />
-  <meta name="author" content="UNIFUD S.A.S." />
+  <meta name="author" content="UNIFUB S.A.S." />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <link rel="canonical" href={canonical} />
 
@@ -44,8 +44,8 @@ const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
   <meta name="msapplication-TileColor" content="#223846" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-  <meta name="apple-mobile-web-app-title" content="uniFud" />
-  <meta name="application-name" content="uniFud" />
+  <meta name="apple-mobile-web-app-title" content="uniFub" />
+  <meta name="application-name" content="uniFub" />
 
   <!-- Favicons & Touch Icons -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -55,7 +55,7 @@ const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
 
   <!-- Open Graph / Facebook / WhatsApp -->
   <meta property="og:type" content={type} />
-  <meta property="og:site_name" content="uniFud" />
+  <meta property="og:site_name" content="uniFub" />
   <meta property="og:url" content={canonical} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
@@ -64,7 +64,7 @@ const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="uniFud — Foodtech Universitaria" />
+  <meta property="og:image:alt" content="uniFub — Foodtech Universitaria" />
   <meta property="og:locale" content="es_CO" />
 
   <!-- Twitter / X -->
@@ -73,8 +73,8 @@ const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={fullImageUrl} />
-  <meta name="twitter:site" content="@unifud_co" />
-  <meta name="twitter:creator" content="@unifud_co" />
+  <meta name="twitter:site" content="@unifub_co" />
+  <meta name="twitter:creator" content="@unifub_co" />
 
   <!-- Geographic & Local SEO (Cali, Colombia) -->
   <meta name="geo.region" content="CO-VAC" />
@@ -97,11 +97,11 @@ const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "https://www.unifudapp.com/#organization",
-        "name": "UNIFUD S.A.S.",
-        "alternateName": "uniFud",
-        "url": "https://www.unifudapp.com",
-        "logo": "https://www.unifudapp.com/logo.png",
+        "@id": "https://www.unifubapp.com/#organization",
+        "name": "UNIFUB S.A.S.",
+        "alternateName": "uniFub",
+        "url": "https://www.unifubapp.com",
+        "logo": "https://www.unifubapp.com/logo.png",
         "taxID": "901968882-2",
         "address": {
           "@type": "PostalAddress",
@@ -112,20 +112,20 @@ const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
         "contactPoint": [
           {
             "@type": "ContactPoint",
-            "email": "administracion@unifudapp.com",
+            "email": "administracion@unifubapp.com",
             "contactType": "customer service",
             "areaServed": "CO",
             "availableLanguage": "Spanish"
           }
         ],
         "sameAs": [
-          "https://instagram.com/unifud.co"
+          "https://instagram.com/unifub.co"
         ]
       },
       {
         "@type": "SoftwareApplication",
-        "@id": "https://www.unifudapp.com/#app",
-        "name": "uniFud App",
+        "@id": "https://www.unifubapp.com/#app",
+        "name": "uniFub App",
         "operatingSystem": "iOS, Android",
         "applicationCategory": "FoodAndDrinkApplication",
         "offers": {
@@ -135,17 +135,17 @@ const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
         },
         "description": "Plataforma para pre-ordenar comida en campus universitarios y recoger sin filas.",
         "author": {
-          "@id": "https://www.unifudapp.com/#organization"
+          "@id": "https://www.unifubapp.com/#organization"
         }
       },
       {
         "@type": "WebSite",
-        "@id": "https://www.unifudapp.com/#website",
-        "url": "https://www.unifudapp.com",
-        "name": "uniFud",
+        "@id": "https://www.unifubapp.com/#website",
+        "url": "https://www.unifubapp.com",
+        "name": "uniFub",
         "description": "La fila puede esperar. El hambre no.",
         "publisher": {
-          "@id": "https://www.unifudapp.com/#organization"
+          "@id": "https://www.unifubapp.com/#organization"
         },
         "inLanguage": "es-CO"
       }

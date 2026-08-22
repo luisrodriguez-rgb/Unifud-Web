@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.unifudapp.com/sitemap.xml
+Sitemap: https://www.unifubapp.com/sitemap.xml

@@ -1,13 +1,13 @@
 <div align="center">
-  <img src="public/logo.svg" alt="uniFud Logo" width="130" height="130" />
-  <h1>uniFud Web Platform</h1>
+  <img src="public/logo.svg" alt="uniFub Logo" width="130" height="130" />
+  <h1>uniFub Web Platform</h1>
   <p><strong>Plataforma tecnologica de pre-ordenes y comida express para campus universitarios.</strong></p>
   <p><em>La fila puede esperar. El hambre no.</em></p>
   <br />
 </div>
 
 <div align="center">
-  <img src="public/preview-devices.png" alt="uniFud Web Responsive Preview (Mobile & Desktop)" width="950" />
+  <img src="public/preview-devices.png" alt="uniFub Web Responsive Preview (Mobile & Desktop)" width="950" />
 </div>
 
 ---
@@ -17,13 +17,13 @@
 > **Aviso de Caracter Educativo y No Comercial:**
 > Este repositorio y proyecto web corresponden a una propuesta de rediseno conceptual, academica y de investigacion tecnica sobre arquitectura frontend moderna, optimizacion de rendimiento (Astro 5+, TypeScript) y experiencia de usuario (UI/UX) para aplicaciones de campus universitarios.
 >
-> Este desarrollo **no tiene fines de comercializacion ni lucro independiente**. Todos los nombres comerciales, marcas registradas, marcas de comida y logotipos mostrados (como uniFud, Sandwich Qbano, Wonka Campus, Universidades) pertenecen exclusivamente a sus respectivos propietarios legales y se utilizan unicamente como referencia visual y contextual en el marco del estudio de diseno y arquitectura de software.
+> Este desarrollo **no tiene fines de comercializacion ni lucro independiente**. Todos los nombres comerciales, marcas registradas, marcas de comida y logotipos mostrados (como uniFub, Sandwich Qbano, Wonka Campus, Universidades) pertenecen exclusivamente a sus respectivos propietarios legales y se utilizan unicamente como referencia visual y contextual en el marco del estudio de diseno y arquitectura de software.
 
 ---
 
 ## Descripcion General
 
-**uniFud** es una startup foodtech con base en Cali, Colombia, disenada para erradicar las filas en horas pico dentro de universidades e instituciones educativas. Permite a los estudiantes pre-ordenar alimentos y bebidas desde sus aulas y recogerlos listos en barra en segundos, con alertas automaticas y pagos directos.
+**uniFub** es una startup foodtech con base en Cali, Colombia, disenada para erradicar las filas en horas pico dentro de universidades e instituciones educativas. Permite a los estudiantes pre-ordenar alimentos y bebidas desde sus aulas y recogerlos listos en barra en segundos, con alertas automaticas y pagos directos.
 
 Esta plataforma web esta construida con **Astro 5+**, implementando una arquitectura modular por islas orientada a maxima velocidad de carga (0kb de JavaScript innecesario en cliente), SEO local por campus universitario y escalabilidad hacia pedidos web (PWA).
 
@@ -36,7 +36,7 @@ Esta plataforma web esta construida con **Astro 5+**, implementando una arquitec
 - **Catalogo Dinamico por Campus**: Soporte para multiples sedes (Universidad ICESI, Pontificia Universidad Javeriana Cali, Lago Verde).
 - **Calculadora de Tiempo Ahorrado**: Widget interactivo para calcular horas semestrales recuperadas por el estudiante.
 - **Modulo B2B para Restaurantes Aliados**: Simulador comercial de incremento de capacidad (+35% en horas pico) y formulario de postulacion para concesiones de campus.
-- **Programa uniFud Reps**: Pagina dedicada para captacion de embajadores y lideres estudiantiles.
+- **Programa uniFub Reps**: Pagina dedicada para captacion de embajadores y lideres estudiantiles.
 - **Documentacion Legal Completa**:
   - `terminos-y-condiciones.astro`: Terminos y Condiciones de Uso v1.0 - Colombia.
   - `politica-privacidad.astro`: Politica de Tratamiento de Datos Personales (Ley 1581 de 2012 / Habeas Data).
@@ -49,7 +49,7 @@ Esta plataforma web esta construida con **Astro 5+**, implementando una arquitec
 Desplegado y verificado en produccion en [unifud-web.vercel.app](https://unifud-web.vercel.app/):
 
 <div align="center">
-  <img src="public/lighthouse-score.png" alt="Lighthouse Score uniFud Web" width="850" />
+  <img src="public/lighthouse-score.png" alt="Lighthouse Score uniFub Web" width="850" />
 </div>
 
 ### Metricas Clave de Rendimiento y Accesibilidad
@@ -67,7 +67,7 @@ Desplegado y verificado en produccion en [unifud-web.vercel.app](https://unifud-
 ## Arquitectura del Proyecto
 
 ```text
-unifud-web/
+unifub-web/
 ├── public/
 │   ├── logo.svg              # Logotipo vectorial oficial
 │   ├── logo.png              # Asset en alta resolucion para Open Graph
@@ -149,12 +149,12 @@ npm run preview
 
 ## Informacion Corporativa de Referencia
 
-- **Razon Social de Referencia**: UNIFUD S.A.S.
+- **Razon Social de Referencia**: UNIFUB S.A.S.
 - **NIT**: 901968882-2
 - **Domicilio**: Cali, Valle del Cauca, Colombia
-- **Contacto Administrativo Oficial**: administracion@unifudapp.com
-- **Canal Habeas Data**: atencionalclienteunifud@gmail.com
-- **Instagram Oficial**: [@unifud.co](https://instagram.com/unifud.co)
+- **Contacto Administrativo Oficial**: administracion@unifubapp.com
+- **Canal Habeas Data**: atencionalclienteunifub@gmail.com
+- **Instagram Oficial**: [@unifub.co](https://instagram.com/unifub.co)
 
 ---
 
